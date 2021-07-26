@@ -1,0 +1,6 @@
+[book]
+authors = ["Jelle Vos"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Crypto Catalog"
