@@ -7,4 +7,5 @@ title = "Crypto Catalog"
 
 [output.html]
 mathjax-support = true
+git-repository-url = "https://github.com/jellevos/crypto-catalog"
 
