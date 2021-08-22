@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title_page.html">Crypto Catalog</a></li><li class="chapter-item expanded "><a href="asymmetric_cryptosystems.html"><strong aria-hidden="true">1.</strong> Asymmetric cryptosystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="elgamal.html"><strong aria-hidden="true">1.1.</strong> ElGamal cryptosystem</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title_page.html">Crypto Catalog</a></li><li class="chapter-item expanded "><a href="computational_hardness.html"><strong aria-hidden="true">1.</strong> Computational hardness assumptions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ddh.html"><strong aria-hidden="true">1.1.</strong> Decisional Diffie-Hellman (DDH)</a></li></ol></li><li class="chapter-item expanded "><a href="asymmetric_cryptosystems.html"><strong aria-hidden="true">2.</strong> Asymmetric cryptosystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="elgamal.html"><strong aria-hidden="true">2.1.</strong> ElGamal cryptosystem</a></li></ol></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -154,6 +154,8 @@
 <p>Since some cryptographic building blocks have become common knowledge under cryptographers, it is not always immediately clear which work to reference for attribution. For example, some papers cite the original paper where the cryptosystem was published, others cite a survey paper or book that discusses the cryptosystem in detail, and some simply cite another work that lays out the cryptosystem in short.</p>
 <p>The aim of this book is to keep a clear list of references belonging to cryptographic building blocks. The book will cite the original work, but also prevalent works that analyze their security, among others. As a second aim, this book will offer a consistent notation between different building blocks.</p>
 <p>This book is a collaborative effort. If you spot any typos or if you have any additions, please do not hesitate to make a pull request! In addition, if you find any mistakes or inconsistencies that require some discussion, please open an issue. All help is appreciated!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="computational-hardness-assumptions"><a class="header" href="#computational-hardness-assumptions">Computational hardness assumptions</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="decisional-diffie-hellman-ddh"><a class="header" href="#decisional-diffie-hellman-ddh">Decisional Diffie-Hellman (DDH)</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="asymmetric-cryptosystems"><a class="header" href="#asymmetric-cryptosystems">Asymmetric cryptosystems</a></h1>
 <p><em>Also: public-key cryptography.</em></p>
 <p>An <strong>asymmetric cryptosystem</strong> defines the following operations:</p>
@@ -163,13 +165,35 @@
 <li><strong>Encrypt</strong>\((m, \mathit{pk}) \mapsto c\): Encrypts a message using the public key into a ciphertext.</li>
 <li><strong>Decrypt</strong>\((c, \mathit{pk}) \mapsto m\): Decrypts a ciphertext using the secret key to recover the plaintext.</li>
 </ul>
+<blockquote>
+<p><strong>Symbol definitions</strong></p>
+<ul>
+<li>\(\lambda\) - security parameter</li>
+<li>\(\mathit{pk}\) - public key</li>
+<li>\(\mathit{sk}\) - secret key</li>
+<li>\(m\) - plaintext</li>
+<li>\(c\) - ciphertext</li>
+</ul>
+</blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="elgamal-cryptosystem"><a class="header" href="#elgamal-cryptosystem">ElGamal cryptosystem</a></h1>
+<p>The ElGamal cryptosystem is defined over a (sub)group \(\mathbb{G}\) in which the <a href="./ddh.html">DDH assumption</a> is assumed to hold.</p>
 <ul>
 <li><strong>Setup</strong>: </li>
 <li><strong>KeyGen</strong>\((\lambda) \mapsto \langle \mathit{pk}, \mathit{sk} \rangle\): </li>
 <li><strong>Encrypt</strong>\((m, \mathit{pk}) \mapsto c\): </li>
 <li><strong>Decrypt</strong>\((c, \mathit{pk}) \mapsto m\): </li>
 </ul>
+<blockquote>
+<p><strong>Symbol definitions</strong></p>
+<ul>
+<li>\(q\) - the order \(|\mathbb{G}|\) of the (sub)group</li>
+<li>\(\lambda\) - security parameter</li>
+<li>\(\mathit{pk} \in \mathbb{G}\) - public key</li>
+<li>\(\mathit{sk} \in \mathbb{Z}_q\) - secret key</li>
+<li>\(m \in \mathbb{G}\) - plaintext</li>
+<li>\(c \in \mathbb{G}\) - ciphertext</li>
+</ul>
+</blockquote>
 
                     </main>
 
