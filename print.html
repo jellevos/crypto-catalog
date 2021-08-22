@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title_page.html">Crypto Catalog</a></li><li class="chapter-item expanded "><a href="computational_hardness.html"><strong aria-hidden="true">1.</strong> Computational hardness assumptions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ddh.html"><strong aria-hidden="true">1.1.</strong> Decisional Diffie-Hellman (DDH)</a></li></ol></li><li class="chapter-item expanded "><a href="asymmetric_cryptosystems.html"><strong aria-hidden="true">2.</strong> Asymmetric cryptosystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="elgamal.html"><strong aria-hidden="true">2.1.</strong> ElGamal cryptosystem</a></li></ol></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="title_page.html">Crypto Catalog</a></li><li class="chapter-item expanded "><a href="computational_hardness.html"><strong aria-hidden="true">1.</strong> Computational hardness assumptions</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ddh.html"><strong aria-hidden="true">1.1.</strong> Decisional Diffie-Hellman (DDH)</a></li></ol></li><li class="chapter-item expanded "><a href="asymmetric_cryptosystems.html"><strong aria-hidden="true">2.</strong> Asymmetric cryptosystems</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="elgamal.html"><strong aria-hidden="true">2.1.</strong> ElGamal cryptosystem</a></li></ol></li><li class="chapter-item expanded "><a href="bibliography.html">Bibliography</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -176,7 +176,7 @@
 </ul>
 </blockquote>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="elgamal-cryptosystem"><a class="header" href="#elgamal-cryptosystem">ElGamal cryptosystem</a></h1>
-<p>The ElGamal cryptosystem was first proposed by Taher ElGamal in 1984 {{#cite DBLP:conf/crypto/Gamal84}}. It is defined over a (sub)group \(\mathbb{G}\) in which the <a href="./ddh.html">DDH assumption</a> is assumed to hold.</p>
+<p>The ElGamal cryptosystem was first proposed by Taher ElGamal in 1984 [<a href="bibliography.html#DBLP:conf/crypto/Gamal84">DBLP:conf/crypto/Gamal84</a>]. It is defined over a (sub)group \(\mathbb{G}\) in which the <a href="./ddh.html">DDH assumption</a> is assumed to hold.</p>
 <ul>
 <li><strong>Setup</strong>: </li>
 <li><strong>KeyGen</strong>\((\lambda) \mapsto \langle \mathit{pk}, \mathit{sk} \rangle\): </li>
@@ -194,6 +194,60 @@
 <li>\(c \in \mathbb{G}\) - ciphertext</li>
 </ul>
 </blockquote>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="bibliography"><a class="header" href="#bibliography">Bibliography</a></h1>
+<script type="text/javascript">
+function defaultCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+        var ok = document.execCommand('copy');
+        var msg = ok ? 'was ok' : 'failed';
+        console.log('Backing copy: Text copy was ' + msg);
+    } catch (err) {
+        console.error('Backing copy: Unable to copy text', err);
+    }
+
+    document.body.removeChild(textArea);
+}
+
+function copyToClipboard(text) {
+    if (!navigator.clipboard) {
+        defaultCopyTextToClipboard(text);
+        return;
+    }
+    navigator.clipboard.writeText(text).then(function() {
+        console.log('Text copied to clipboard');
+    }, function(err) {
+        console.error('Error copying text: ', err);
+    });
+}
+
+</script>
+<style></style>
+<div class="bib_div">
+<details data-key="DBLP:conf/crypto/Gamal84" class=ref>
+<summary class=citation>
+<a id="DBLP:conf/crypto/Gamal84">[DBLP:conf/crypto/Gamal84]</a> - Taher El Gamal - <a href="https://doi.org/10.1007/3-540-39568-7\_2" target="_blank"><cite>A Public Key Cryptosystem and a Signature Scheme Based on Discrete
+               Logarithms</cite></a>. - 1984. -
+<button onclick="copyToClipboard('\{\{ #cite DBLP:conf/crypto/Gamal84 \}\}')">Copy citation_key</button>
+</summary>
+<section class=abstract>
+<h1 id="summaryabstract"><a class="header" href="#summaryabstract">Summary/Abstract</a></h1>
+<div>N/A</div>
+</section>
+</details>
+</div>
+<br/>
 
                     </main>
 
