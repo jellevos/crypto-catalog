@@ -5,6 +5,9 @@ multilingual = false
 src = "src"
 title = "Crypto Catalog"
 
+[preprocessor.bib]
+bibliography = "references.bib"
+
 [output.html]
 mathjax-support = true
 git-repository-url = "https://github.com/jellevos/crypto-catalog"

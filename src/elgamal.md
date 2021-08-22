@@ -1,5 +1,5 @@
 # ElGamal cryptosystem
-The ElGamal cryptosystem is defined over a (sub)group \\(\mathbb{G}\\) in which the [DDH assumption](./ddh.md) is assumed to hold.
+The ElGamal cryptosystem was first proposed by Taher ElGamal in 1984 {{#cite DBLP:conf/crypto/Gamal84}}. It is defined over a (sub)group \\(\mathbb{G}\\) in which the [DDH assumption](./ddh.md) is assumed to hold.
 
 - **Setup**: 
 - **KeyGen**\\((\lambda) \mapsto \langle \mathit{pk}, \mathit{sk} \rangle\\): 
