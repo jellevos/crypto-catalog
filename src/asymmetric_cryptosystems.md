@@ -6,3 +6,11 @@ An **asymmetric cryptosystem** defines the following operations:
 - **KeyGen**\\((\lambda) \mapsto \langle \mathit{pk}, \mathit{sk} \rangle\\): Generates a public-secret key pair used to encrypt and decrypt.
 - **Encrypt**\\((m, \mathit{pk}) \mapsto c\\): Encrypts a message using the public key into a ciphertext.
 - **Decrypt**\\((c, \mathit{pk}) \mapsto m\\): Decrypts a ciphertext using the secret key to recover the plaintext.
+
+> **Symbol definitions**
+> - \\(\lambda\\) - security parameter
+> - \\(\mathit{pk}\\) - public key
+> - \\(\mathit{sk}\\) - secret key
+> - \\(m\\) - plaintext
+> - \\(c\\) - ciphertext
+
