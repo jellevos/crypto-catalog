@@ -22,6 +22,8 @@ jobs:
       - run: cargo install mdbook-bib
       - run: mdbook build
 
+      - run: cp CNAME ./book/CNAME
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.ref == 'refs/heads/main' }}
